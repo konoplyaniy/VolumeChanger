@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.application.firstapplication.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="8sp"
+            android:padding="@dimen/fab_margin"
+            android:text="@string/main_title"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <SeekBar
+            android:id="@+id/volumeLevel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:padding="20dp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/refreshBtn"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_light"
+            android:onClick="refreshButton"
+            android:padding="@dimen/fab_margin"
+            android:text="@string/refresh_btn"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/show_hide_server_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:elevation="0dp"
+            android:onClick="showHideServerSettings"
+            android:padding="25dip"
+            android:text="@string/connect_btn_show"
+            tools:layout_editor_absoluteX="110dp"
+            tools:layout_editor_absoluteY="131dp" />
+
+        <EditText
+            android:id="@+id/server"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_dropdown_light_frame"
+            android:ems="10"
+            android:hint="@string/server_ip"
+            android:inputType="text"
+            android:padding="@dimen/fab_margin"
+            android:singleLine="true"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/serverPort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_dropdown_light_frame"
+            android:ems="10"
+            android:hint="@string/server_port"
+            android:inputType="text"
+            android:padding="@dimen/fab_margin"
+            android:singleLine="false"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/connectButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="submitServerSettings"
+            android:padding="10dip"
+            android:text="@string/ok_btn"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
